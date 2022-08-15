@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Profile from "./components/Profile";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const bio = {
+    age: "27",
+    name: "Johnathew",
+    gender: "Male",
+    height: "5'9\"",
+    weight: "170lbs",
+}
+
+  return <div>Tinder but for fighting 
+    <Profile name={bio.name} age={bio.age} gender={bio.gender} height={bio.height} weight={bio.weight}/>
+  </div>;
 }
 
 export default App;
