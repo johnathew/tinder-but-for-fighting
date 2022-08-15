@@ -1,14 +1,25 @@
+import "./Profile.css";
+
 const Profile = (props) => {
   return (
-    <div className="profile">
-      <h1>{props.name}</h1>
-      <ul>
-        <li>{props.age}</li>
-        <li>{props.gender}</li>
-        <li>{props.height}</li>
-        <li>{props.weight}</li>
-      </ul>
-      <img src={`${process.env.PUBLIC_URL}/baboon.jpeg`} alt="monke" />
+    <div>
+      <div className="profile_one">
+        <h1>{props.name}</h1>
+        <img
+          src={`${process.env.PUBLIC_URL}/baboon.jpeg`}
+          alt="monke"
+          className="profile_one_img"
+        />
+      </div>
+      <div className="profile_info__list">
+        <ul>
+          <li>Age: {props.age}</li>
+          <li>Gender: {props.gender}</li>
+          <li> Height: {props.height}</li>
+          <li>Weight: {props.weight}</li>
+          <li>Reach: {props.reach}</li>
+        </ul>
+      </div>
     </div>
   );
 };

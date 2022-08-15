@@ -8,10 +8,11 @@ function App() {
     gender: "Male",
     height: "5'9\"",
     weight: "170lbs",
+    reach: "65in",
 }
 
   return <div>Tinder but for fighting 
-    <Profile name={bio.name} age={bio.age} gender={bio.gender} height={bio.height} weight={bio.weight}/>
+    <Profile name={bio.name} age={bio.age} gender={bio.gender} height={bio.height} weight={bio.weight} reach={bio.reach}/>
   </div>;
 }
 

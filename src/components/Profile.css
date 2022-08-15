@@ -1,0 +1,19 @@
+ul {
+    color: rgb(255, 255, 255);
+}
+
+.profile_one {
+    display: flex;
+    background-color: rgb(160, 154, 154);
+    flex-flow: column wrap;
+    border-radius: 2px;
+    width: 50%;
+}
+
+.profile_one_img {
+    max-width: 75%;
+}
+
+.profile_info__list {
+    background-color: red;
+}
