@@ -1,0 +1,11 @@
+.information {
+    width: 11rem;
+}
+
+.information_list {
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    font-size: large;
+}

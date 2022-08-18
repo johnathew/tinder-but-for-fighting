@@ -1,0 +1,7 @@
+.main {
+    display: flex;
+}
+
+.main__profile {
+    width: 50rem;
+}
