@@ -13,16 +13,7 @@ const Profile = (props) => {
         />
       </div>
       <Information />
-      {/* <div className="profile_info__list">
-        <ul>
-          <li>{props.age}</li>
-          <li>{props.gender}</li>
-          <li> {props.height}</li>
-          <li>{props.weight}</li>
-          <li>{props.reach}</li>
-        </ul>
-      </div> */}
-      <div className="profile_one">
+      <div className="profile_two">
         <h1>{props.name}</h1>
         <img
           src={`${process.env.PUBLIC_URL}/baboon.jpeg`}

@@ -1,5 +1,5 @@
 import Profile from "./components/Profile";
-import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   const bio = {
@@ -13,8 +13,8 @@ function App() {
 
   return (
     <div>
-      Tinder but for fighting
-      <div className="main__profile">
+     <Header />
+      <div>
         <Profile />
       </div>
     </div>

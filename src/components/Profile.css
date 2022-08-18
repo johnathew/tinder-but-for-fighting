@@ -3,30 +3,26 @@ ul {
 }
 
 .profile_main {
-  display: flex;
+    display: flex;
 }
 
 .profile_one {
-  background-color: rgb(160, 154, 154);
   border-radius: 20px;
-  width: 50%;
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 10px 6px -6px #777;
 }
 
 .profile_one_img {
-  max-width: 400px;
+  max-width: 375px;
   max-height: 100%;
 }
 
 .profile_info__list {
   background-color: red;
   width: 200px;
-  display: flex;
   align-items: center;
 }
 
-.profile_info__list > ul {
-  list-style-type: none;
-}
+.profile_two {
+    border-radius: 20px;
+    box-shadow: 0 10px 6px -12px rgb(0, 0, 0);
+  }
