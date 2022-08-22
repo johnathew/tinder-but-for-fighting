@@ -2,14 +2,7 @@ import "./ProfileTwoInfo.css";
 
 const ProfileTwoInfo = (props) => {
   return (
-    <div>
-      <div className="profile_two">
-        <img
-          src={`${process.env.PUBLIC_URL}/baboon.jpeg`}
-          alt="monke"
-          className="profile_one_img"
-        />
-      </div>
+    <div className="profile_two">
       <ul className="two_info">
         <br></br>
         <h1>Name: {props.name}</h1>
@@ -23,6 +16,13 @@ const ProfileTwoInfo = (props) => {
         <br></br>
         <li>Reach: {props.reach}</li>
       </ul>
+      <img
+        src={`${process.env.PUBLIC_URL}/baboon.jpeg`}
+        alt="monke"
+        className="profile_one_img"
+      />
+
+      <button>Swipe Right</button>
     </div>
   );
 };

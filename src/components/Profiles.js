@@ -1,4 +1,3 @@
-// import Details from "./Details";
 import "./Profile.css";
 import ProfileOneInfo from "./ProfileOneInfo";
 import ProfileTwoInfo from "./ProfileTwoInfo";
@@ -14,7 +13,6 @@ const Profiles = (props) => {
         weight={props.bio[0].weight} 
         reach={props.bio[0].reach} 
       />
-      {/* <Details /> */}
       <ProfileTwoInfo 
       name={props.bio[1].name}
       age={props.bio[1].age}

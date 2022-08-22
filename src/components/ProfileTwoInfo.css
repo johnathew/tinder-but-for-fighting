@@ -1,7 +1,11 @@
+.profile_two {
+    display: flex;
+}
+
 .two_info {
     background-color: red;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     list-style-type: none;
     border-radius: 10px;
     margin-right: 10px;
