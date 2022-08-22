@@ -1,8 +1,8 @@
-.information {
+.details {
     width: 12rem;
 }
 
-.information_list {
+.details_list {
     list-style-type: none;
     color:black;
     font-size: large;

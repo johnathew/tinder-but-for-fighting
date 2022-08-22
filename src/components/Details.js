@@ -1,9 +1,9 @@
-import "./Information.css";
+import "./Details.css";
 
-const Information = () => {
+const Details = (props) => {
   return (
-    <div className="information">
-      <ul className="information_list">
+    <div className="details">
+      <ul className="details_list">
         <li>Age</li>
         <br></br>
         <li>Gender</li>
@@ -18,4 +18,4 @@ const Information = () => {
   );
 };
 
-export default Information;
+export default Details;
