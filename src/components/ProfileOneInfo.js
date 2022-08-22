@@ -14,15 +14,15 @@ const ProfileOneInfo = (props) => {
         <ul className="one_info">
           <br></br>
           <h1>Name: {props.name}</h1>
-        <li>Age: {props.age}</li>
-        <br></br>
-        <li>Gender: {props.gender}</li>
-        <br></br>
-        <li>Height: {props.height}</li>
-        <br></br>
-        <li>Weight: {props.weight}</li>
-        <br></br>
-        <li>Reach: {props.reach}</li>
+          <li>Age: {props.age}</li>
+          <br></br>
+          <li>Gender: {props.gender}</li>
+          <br></br>
+          <li>Height: {props.height}</li>
+          <br></br>
+          <li>Weight: {props.weight}</li>
+          <br></br>
+          <li>Reach: {props.reach}</li>
         </ul>
       </div>
     </div>
