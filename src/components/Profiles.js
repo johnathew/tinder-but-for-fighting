@@ -18,7 +18,6 @@ const Profiles = (props) => {
     });
   };
 
-
   return (
     <div className="profile_main">
       <ProfileOneInfo
