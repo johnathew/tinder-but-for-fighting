@@ -1,11 +1,16 @@
 import "./ProfileTwoInfo.css";
 
 const ProfileTwoInfo = (props) => {
+
+
   return (
     <div className="profile_two">
       <ul className="two_info">
         <br></br>
-        <h1>Name: {props.name}</h1>
+        <h1>
+          Name: <br></br>
+          {props.name}
+        </h1>
         <li>Age: {props.age}</li>
         <br></br>
         <li>Gender: {props.gender}</li>
@@ -21,8 +26,6 @@ const ProfileTwoInfo = (props) => {
         alt="monke"
         className="profile_one_img"
       />
-
-      <button>Swipe Right</button>
     </div>
   );
 };

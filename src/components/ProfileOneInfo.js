@@ -13,7 +13,7 @@ const ProfileOneInfo = (props) => {
         </div>
         <ul className="one_info">
           <br></br>
-          <h1>Name: {props.name}</h1>
+          <h1>Name: <br></br>{props.name}</h1>
           <li>Age: {props.age}</li>
           <br></br>
           <li>Gender: {props.gender}</li>

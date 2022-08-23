@@ -1,8 +1,24 @@
 import "./Profile.css";
 import ProfileOneInfo from "./ProfileOneInfo";
 import ProfileTwoInfo from "./ProfileTwoInfo";
+import { useState } from "react";
 
 const Profiles = (props) => {
+  const [profile, setProfile] = useState(0);
+
+  const rightSwipeHandler = () => {
+    setProfile(() => {
+      return profile + 1;
+    });
+  };
+
+  const leftSwipeHandler = () => {
+    setProfile(() => {
+      return profile - 1;
+    });
+  };
+
+
   return (
     <div className="profile_main">
       <ProfileOneInfo
@@ -10,16 +26,19 @@ const Profiles = (props) => {
         age={props.bio[0].age}
         gender={props.bio[0].gender}
         height={props.bio[0].height}
-        weight={props.bio[0].weight} 
-        reach={props.bio[0].reach} 
+        weight={props.bio[0].weight}
+        reach={props.bio[0].reach}
       />
-      <ProfileTwoInfo 
-      name={props.bio[1].name}
-      age={props.bio[1].age}
-      gender={props.bio[1].gender}
-      height={props.bio[1].height}
-      weight={props.bio[1].weight} 
-      reach={props.bio[1].reach} />
+      <button onClick={leftSwipeHandler}>Swipe Left</button>
+      <ProfileTwoInfo
+        name={props.bio[profile].name}
+        age={props.bio[profile].age}
+        gender={props.bio[profile].gender}
+        height={props.bio[profile].height}
+        weight={props.bio[profile].weight}
+        reach={props.bio[profile].reach}
+      />
+      <button onClick={rightSwipeHandler}>Swipe Right</button>
     </div>
   );
 };
