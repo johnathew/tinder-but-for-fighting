@@ -4,17 +4,25 @@ import ProfileTwoInfo from "./ProfileTwoInfo";
 import { useState } from "react";
 
 const Profiles = (props) => {
-  const [profile, setProfile] = useState(0);
+  let [profile, setProfile] = useState(0);
 
   const rightSwipeHandler = () => {
     setProfile(() => {
-      return profile + 1;
+      if (profile >= 2) {
+        return (profile = 0);
+      } else {
+        return profile + 1;
+      }
     });
   };
 
   const leftSwipeHandler = () => {
     setProfile(() => {
-      return profile - 1;
+      if (profile <= 0) {
+        return (profile = 2);
+      } else {
+        return profile - 1;
+      }
     });
   };
 
