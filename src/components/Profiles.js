@@ -1,6 +1,5 @@
 import "./Profile.css";
-import ProfileOneInfo from "./ProfileOneInfo";
-import ProfileTwoInfo from "./ProfileTwoInfo";
+import ProfileInfo from "./ProfileInfo";
 import { useState } from "react";
 
 const Profiles = (props) => {
@@ -28,7 +27,7 @@ const Profiles = (props) => {
 
   return (
     <div className="profile_main">
-      <ProfileOneInfo
+      <ProfileInfo
         name={props.bio[0].name}
         age={props.bio[0].age}
         gender={props.bio[0].gender}
@@ -37,7 +36,7 @@ const Profiles = (props) => {
         reach={props.bio[0].reach}
       />
       <button onClick={leftSwipeHandler}>Swipe Left</button>
-      <ProfileTwoInfo
+      <ProfileInfo
         name={props.bio[profile].name}
         age={props.bio[profile].age}
         gender={props.bio[profile].gender}

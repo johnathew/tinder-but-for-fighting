@@ -1,6 +1,6 @@
-import "./ProfileOneInfo.css";
+import "./ProfileInfo.css";
 
-const ProfileOneInfo = (props) => {
+const ProfileInfo = (props) => {
   return (
     <div>
       <div className="profile_main">
@@ -29,4 +29,4 @@ const ProfileOneInfo = (props) => {
   );
 };
 
-export default ProfileOneInfo;
+export default ProfileInfo;
