@@ -27,6 +27,14 @@ function App() {
       weight: "250lbs",
       reach: "77in",
     },
+    {
+      age: "22",
+      name: "Charlie",
+      gender: "Male",
+      height: "5'7\"",
+      weight: "150lbs",
+      reach: "60in",
+    },
   ];
 
   return (

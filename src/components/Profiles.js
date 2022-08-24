@@ -1,14 +1,14 @@
-import "./Profile.css";
+import "./Profiles.css";
 import ProfileInfo from "./ProfileInfo";
 import { useState } from "react";
 
 const Profiles = (props) => {
-  let [profile, setProfile] = useState(0);
+  let [profile, setProfile] = useState(1); // is it ok to use let here? 
 
   const rightSwipeHandler = () => {
     setProfile(() => {
-      if (profile >= 2) {
-        return (profile = 0);
+      if (profile >= 3) {
+        return (profile = 1);
       } else {
         return profile + 1;
       }
@@ -17,8 +17,8 @@ const Profiles = (props) => {
 
   const leftSwipeHandler = () => {
     setProfile(() => {
-      if (profile <= 0) {
-        return (profile = 2);
+      if (profile <= 1) {
+        return (profile = 3);
       } else {
         return profile - 1;
       }
