@@ -6,8 +6,8 @@ const ProfileInfo = (props) => {
       <div className="profile_main">
         <div className="profile_one">
           <img
-            src={`${process.env.PUBLIC_URL}/baboon.jpeg`}
-            alt="monke"
+            src={props.image}
+            alt="profile_one"
             className="profile_one_img"
           />
         </div>

@@ -3,7 +3,7 @@ import ProfileInfo from "./ProfileInfo";
 import { useState } from "react";
 
 const Profiles = (props) => {
-  let [profile, setProfile] = useState(1); // is it ok to use let here? 
+  let [profile, setProfile] = useState(0); // is it ok to use let here?
 
   const rightSwipeHandler = () => {
     setProfile(() => {
@@ -34,6 +34,7 @@ const Profiles = (props) => {
         height={props.bio[0].height}
         weight={props.bio[0].weight}
         reach={props.bio[0].reach}
+        image={props.bio[0].image}
       />
       <button onClick={leftSwipeHandler}>Swipe Left</button>
       <ProfileInfo
@@ -43,6 +44,7 @@ const Profiles = (props) => {
         height={props.bio[profile].height}
         weight={props.bio[profile].weight}
         reach={props.bio[profile].reach}
+        image={props.bio[profile].image}
       />
       <button onClick={rightSwipeHandler}>Swipe Right</button>
     </div>

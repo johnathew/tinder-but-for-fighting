@@ -2,38 +2,42 @@ import Profiles from "./components/Profiles";
 import Header from "./components/UI/Header";
 
 function App() {
-  const fighterData = [
+    const fighterData = [
     {
-      age: "27",
+      age: "18",
       name: "Johnathew",
       gender: "Male",
       height: "5'9\"",
-      weight: "170lbs",
+      weight: "145lbs",
       reach: "65in",
+      image: `${process.env.PUBLIC_URL}/johnathew.png`,
     },
     {
       age: "30",
-      name: "Xander",
+      name: "Danny",
       gender: "Male",
-      height: "5'3\"",
-      weight: "180lbs",
+      height: "4'10\"",
+      weight: "150lbs",
       reach: "30in",
+      image:`${process.env.PUBLIC_URL}/danny.jpeg`,
     },
     {
-      age: "50",
+      age: "71",
       name: "Phil",
       gender: "Male",
       height: "6'2\"",
       weight: "250lbs",
       reach: "77in",
+      image: `${process.env.PUBLIC_URL}/DrPhil.jpg`,
     },
     {
-      age: "22",
+      age: "32",
       name: "Charlie",
       gender: "Male",
-      height: "5'7\"",
-      weight: "150lbs",
+      height: "5'8\"",
+      weight: "170lbs",
       reach: "60in",
+      image: `${process.env.PUBLIC_URL}/charlie.jpg`,
     },
   ];
 
