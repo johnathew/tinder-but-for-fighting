@@ -1,9 +1,10 @@
 import "./Profiles.css";
 import ProfileInfo from "./ProfileInfo";
 import { useState } from "react";
+import Card from "./UI/Card.js";
 
 const Profiles = (props) => {
-  let [profile, setProfile] = useState(0); // is it ok to use let here?
+  let [profile, setProfile] = useState(1); // is it ok to use let here?
 
   const rightSwipeHandler = () => {
     setProfile(() => {
@@ -26,7 +27,7 @@ const Profiles = (props) => {
   };
 
   return (
-    <div className="profile_main">
+    <Card className="profiles">
       <ProfileInfo
         name={props.bio[0].name}
         age={props.bio[0].age}
@@ -36,18 +37,20 @@ const Profiles = (props) => {
         reach={props.bio[0].reach}
         image={props.bio[0].image}
       />
-      <button onClick={leftSwipeHandler}>Swipe Left</button>
-      <ProfileInfo
-        name={props.bio[profile].name}
-        age={props.bio[profile].age}
-        gender={props.bio[profile].gender}
-        height={props.bio[profile].height}
-        weight={props.bio[profile].weight}
-        reach={props.bio[profile].reach}
-        image={props.bio[profile].image}
-      />
-      <button onClick={rightSwipeHandler}>Swipe Right</button>
-    </div>
+      <div className="profile_two">
+        <button onClick={leftSwipeHandler}>Swipe Left</button>
+        <ProfileInfo
+          name={props.bio[profile].name}
+          age={props.bio[profile].age}
+          gender={props.bio[profile].gender}
+          height={props.bio[profile].height}
+          weight={props.bio[profile].weight}
+          reach={props.bio[profile].reach}
+          image={props.bio[profile].image}
+        />
+        <button onClick={rightSwipeHandler}>Swipe Right</button>
+      </div>
+    </Card>
   );
 };
 

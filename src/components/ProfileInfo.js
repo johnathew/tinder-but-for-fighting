@@ -3,17 +3,14 @@ import "./ProfileInfo.css";
 const ProfileInfo = (props) => {
   return (
     <div>
-      <div className="profile_main">
-        <div className="profile_one">
-          <img
-            src={props.image}
-            alt="profile_one"
-            className="profile_one_img"
-          />
-        </div>
+      <div>
+        <img src={props.image} alt="profile_one" className="profile_img" />
         <ul className="one_info">
           <br></br>
-          <h1>Name: <br></br>{props.name}</h1>
+          <h1>
+            Name: <br></br>
+            {props.name}
+          </h1>
           <li>Age: {props.age}</li>
           <br></br>
           <li>Gender: {props.gender}</li>

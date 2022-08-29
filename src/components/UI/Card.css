@@ -1,0 +1,8 @@
+.profiles {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items:center;
+  justify-content: space-between;
+  margin-left: 400px;
+  margin-right: 400px;
+}

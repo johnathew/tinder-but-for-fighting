@@ -28,7 +28,7 @@ function App() {
       height: "6'2\"",
       weight: "250lbs",
       reach: "77in",
-      image: `${process.env.PUBLIC_URL}/DrPhil.jpg`,
+      image: `${process.env.PUBLIC_URL}/Dr.Phil2013.jpg`,
     },
     {
       age: "32",
