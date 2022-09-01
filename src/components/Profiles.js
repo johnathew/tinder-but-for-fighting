@@ -2,28 +2,15 @@ import "./Profiles.css";
 import ProfileInfo from "./ProfileInfo";
 import { useState } from "react";
 import Card from "./UI/Card.js";
+import SwipeableViews from "react-swipeable-views";
 
 const Profiles = (props) => {
-  let [profile, setProfile] = useState(1); // is it ok to use let here?
+  // const [profile, setProfile] = useState(1);
 
-  const rightSwipeHandler = () => {
-    setProfile(() => {
-      if (profile >= 3) {
-        return (profile = 1);
-      } else {
-        return profile + 1;
-      }
-    });
-  };
-
-  const leftSwipeHandler = () => {
-    setProfile(() => {
-      if (profile <= 1) {
-        return (profile = 3);
-      } else {
-        return profile - 1;
-      }
-    });
+  const styles = {
+    slide: {
+      padding: 15,
+    },
   };
 
   return (
@@ -37,19 +24,21 @@ const Profiles = (props) => {
         reach={props.bio[0].reach}
         image={props.bio[0].image}
       />
-      <div className="profile_two">
-        <button onClick={leftSwipeHandler}>Swipe Left</button>
-        <ProfileInfo
-          name={props.bio[profile].name}
-          age={props.bio[profile].age}
-          gender={props.bio[profile].gender}
-          height={props.bio[profile].height}
-          weight={props.bio[profile].weight}
-          reach={props.bio[profile].reach}
-          image={props.bio[profile].image}
-        />
-        <button onClick={rightSwipeHandler}>Swipe Right</button>
-      </div>
+      <SwipeableViews enableMouseEvents>
+        {props.bio.map((bio) => (
+          <div style={Object.assign({}, styles.slide)}>
+            <ProfileInfo
+              name={bio.name}
+              age={bio.age}
+              gender={bio.gender}
+              height={bio.height}
+              weight={bio.weight}
+              reach={bio.reach}
+              image={bio.image}
+            />
+          </div>
+        ))}{" "}
+      </SwipeableViews>
     </Card>
   );
 };

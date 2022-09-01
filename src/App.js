@@ -1,6 +1,7 @@
 import Profiles from "./components/Profiles";
 import Header from "./components/UI/Header";
 
+
 function App() {
     const fighterData = [
     {
