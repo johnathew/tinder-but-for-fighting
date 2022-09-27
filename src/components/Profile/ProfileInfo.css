@@ -3,12 +3,11 @@ ul.one_info {
 }
 
 .one_info {
-   background-color: rgba(226, 216, 216, 0.64);
+   background-color: rgba(225, 100, 100, 0.64);
    color: black;
    list-style-type: none;
    border-radius: 10px;
    box-shadow: -5px 5px 2px 1px rgba(0, 0, 0, 0.2);
-   width: 200px;
 }
 
 
