@@ -67,10 +67,24 @@ const ProfileForm = () => {
     event.preventDefault();
 
     const userInfo = {
-      userInput,
+      name: userInput.enteredName,
+      age: userInput.enteredAge,
+      gender: userInput.enteredGender,
+      feet: userInput.enteredFeet,
+      inches: userInput.enteredInches,
+      weight: userInput.enteredWeight,
+      reach: userInput.enteredReach,
     };
 
     console.log(userInfo);
+    setUserInput(() => { return {
+    enteredName: "",
+    enteredAge: "",
+    enteredGender: "",
+    enteredFeet: "",
+    enteredInches: "",
+    enteredWeight: "",
+    enteredReach: "",}});
   };
 
   return (
@@ -78,7 +92,11 @@ const ProfileForm = () => {
       <div className="new-profile__controls">
         <div className="new-profile__control">
           <label>Name</label>
-          <input type="text" onChange={nameChangeHandler} />
+          <input
+            type="text"
+            onChange={nameChangeHandler}
+            value={userInput.enteredName}
+          />
         </div>
       </div>
 
@@ -89,6 +107,7 @@ const ProfileForm = () => {
           min="18"
           max="65"
           step="1"
+          value={userInput.enteredAge}
           onChange={ageChangeHandler}
         />
       </div>
@@ -99,7 +118,7 @@ const ProfileForm = () => {
           type="radio"
           id="gender"
           name="MorF"
-          value="Male"
+          value={userInput.enteredGender}
           onChange={genderChangeHandler}
         />
         <label for="gender">Female </label>
@@ -107,7 +126,7 @@ const ProfileForm = () => {
           type="radio"
           id="gender"
           name="MorF"
-          value="Female"
+          value={userInput.enteredGender}
           onChange={genderChangeHandler}
         />
       </div>
@@ -119,6 +138,7 @@ const ProfileForm = () => {
           min="1"
           max="10"
           step="1"
+          value={userInput.enteredFeet}
           onChange={feetChangeHandler}
         />
         <label>Feet</label>
@@ -127,6 +147,7 @@ const ProfileForm = () => {
           min="1"
           max="11"
           step="1"
+          value={userInput.enteredInches}
           onChange={inchChangeHandler}
         />
         <label>Inches</label>
@@ -139,6 +160,7 @@ const ProfileForm = () => {
           min="0"
           max="500"
           step="1"
+          value={userInput.enteredWeight}
           onChange={weightChangeHandler}
         />
       </div>
@@ -150,6 +172,7 @@ const ProfileForm = () => {
           min="0"
           max="200"
           step="1"
+          value={userInput.enteredReach}
           onChange={reachChangeHandler}
         />
       </div>
